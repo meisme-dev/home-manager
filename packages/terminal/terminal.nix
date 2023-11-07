@@ -4,7 +4,7 @@
 
   imports =
     [
-      ./kitty.nix
+      ./kitty/kitty.nix
       ./zsh.nix
     ];
 

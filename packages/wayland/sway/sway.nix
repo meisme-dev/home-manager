@@ -5,5 +5,5 @@
     sway-contrib.grimshot
   ];
 
-  xdg.configFile."sway/config".source = ./sway.config;
+  xdg.configFile."sway".source = ../sway;
 }

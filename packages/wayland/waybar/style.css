@@ -1,0 +1,96 @@
+* {
+  border: none;
+  border-radius: 0;
+  min-height: 0;
+  font-family: Material Design Icons, JetBrainsMono Nerd Font;
+  font-size: 14px;
+}
+
+window#waybar {
+  background-color: #171a22;
+  padding: 32px;
+}
+
+window#waybar.hidden {
+  opacity: 0.5;
+}
+
+#workspaces {
+  background-color: transparent;
+}
+
+#workspaces button {
+  all: initial;
+  min-width: 20px;
+  min-height: 2px;
+  font-size: 0px;
+  /* padding: 4px 10px; */
+  margin: 16px 2px;
+  border-radius: 99px;
+  background-color: #bdd3ff;
+  opacity: 0.5;
+  color: transparent;
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: 0px 0px 0px 2px #171a22 inset;
+}
+
+#workspaces button.focused,
+#workspaces button:hover {
+  background-color: #bdd3ff;
+  min-width: 64px;
+  opacity: 1;
+  margin: 16px 2px;
+  border-radius: 16px;
+  box-shadow: none;
+}
+
+#workspaces button.urgent {
+  background-color: #f38ba8;
+}
+
+#battery,
+#backlight,
+#pulseaudio,
+#network,
+#clock,
+#idle_inhibitor,
+#layout,
+#tray {
+  padding: 4px 10px;
+  margin: 4px;
+  background-color: transparent;
+  color: #ffffff;
+  transition-property: all;
+  transition-duration: 0.3s;
+}
+
+@keyframes blink {
+  to {
+    background-color: #f38ba8;
+    color: #181825;
+  }
+}
+
+#battery.warning,
+#battery.critical,
+#battery.urgent {
+  background-color: #ff0048;
+  color: #181825;
+  animation-name: blink;
+  animation-duration: 0.3s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+tooltip {
+  border-radius: 8px;
+  padding: 15px;
+  background-color: #131822;
+}
+
+tooltip label {
+  padding: 5px;
+  background-color: #131822;
+}

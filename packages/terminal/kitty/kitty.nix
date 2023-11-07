@@ -5,5 +5,5 @@
     kitty
   ];
 
-  xdg.configFile."kitty/kitty.conf".source = ./kitty.kitty.conf;
+  xdg.configFile."kitty".source = ../kitty;
 }

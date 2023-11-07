@@ -1,0 +1,56 @@
+(defwidget bar []
+  (box :orientation "v"
+    (workspaces)
+    (clock))
+)
+
+(deflisten workspaceList "scripts/all_ws.sh")
+(defwidget workspaces []
+  (box :orientation "v" :space-evenly false :class "workspaces"
+    (for workspace in workspaceList
+      (eventbox :onscroll "if [ '{}' == 'down' ]; then scripts/set_ws.sh next; else scripts/set_ws.sh prev; fi" :class "workspaces"
+        (button :onclick "scripts/set_ws.sh ${workspace.name}" :class {workspace.focused ? "focused" : ""} "${workspace.name}")
+      )
+    )
+  )
+)
+
+(defwidget clock []
+  (box :class "clock"
+    :orientation "v"
+    :space-evenly false
+    :valign "end"
+  time))
+
+
+(defwidget metric [label value onchange]
+  (box :orientation "v"
+    :class "metric"
+    :space-evenly false
+    (box :class "label" label)
+    (scale :min 0
+      :max 101
+      :active {onchange != ""}
+      :value value
+    :onchange onchange)))
+
+
+(deflisten music :initial ""
+"playerctl --follow metadata --format '{{ artist }} - {{ title }}' || true")
+
+(defpoll volume :interval "1s"
+"scripts/getvol")
+
+(defpoll time :interval "10s"
+"scripts/time.sh")
+
+(defwindow bar
+  :monitor 0
+  :windowtype "dock"
+  :geometry (geometry :x "0%"
+    :y "0%"
+    :width "64px"
+    :height "100%"
+  :anchor "left center")
+  :exclusive "true"
+  (bar))

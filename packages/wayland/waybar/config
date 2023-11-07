@@ -1,5 +1,5 @@
 {
-  "position": "bottom",
+  "position": "left",
   "layer": "top",
   "spacing": 0,
   "modules-left": [
@@ -8,9 +8,9 @@
     "sway/scratchpad",
     "custom/media"
   ],
-  "modules-center": [
-    "wlr/taskbar"
-  ],
+  // "modules-center": [
+  //   "wlr/taskbar"
+  // ],
   "modules-right": [
     "idle_inhibitor",
     "pulseaudio",

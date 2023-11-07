@@ -3,8 +3,9 @@
 {
   imports =
     [
-      ./sway.nix
-      ./waybar.nix
+      ./sway/sway.nix
+      ./waybar/waybar.nix
+      ./eww/eww.nix
     ];
     
   home.packages = with pkgs; [
