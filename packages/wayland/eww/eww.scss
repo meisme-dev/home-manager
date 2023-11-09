@@ -5,18 +5,18 @@
 }
 
 .bar {
-  background-color: #07111f;
+  background-color: #111e27;
 }
 
 @keyframes activate {
   0% {
-    background-color: rgba(177, 221, 241, 0.15);
+    background-color: rgba(86, 123, 150, 0.25);
     padding: 8px;
     margin: 2px 24px;
   }
 
   100% {
-    background-color: #E6F9AF;
+    background-color: #fdfbd2;
     padding: 18px;
     margin: 2px 14px;
   }
