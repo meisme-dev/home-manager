@@ -1,5 +1,5 @@
 {
-  "position": "left",
+  "position": "top",
   "layer": "top",
   "spacing": 0,
   "modules-left": [
@@ -9,46 +9,20 @@
     "custom/media"
   ],
   // "modules-center": [
-  //   "wlr/taskbar"
   // ],
   "modules-right": [
-    "idle_inhibitor",
     "pulseaudio",
     "battery",
     "network",
     "backlight",
-    "clock",
-    "tray"
+    "clock"
   ],
-  "sway/mode": {
-    "format": "<span style=\"italic\">{}</span>"
-  },
-  "sway/scratchpad": {
-    "format": "{icon} {count}",
-    "show-empty": false,
-    "format-icons": [
-      "",
-      ""
-    ],
-    "tooltip": true,
-    "tooltip-format": "{app}: {title}"
-  },
-  "idle_inhibitor": {
-    "format": "{icon}",
-    "format-icons": {
-      "activated": "",
-      "deactivated": ""
-    }
-  },
-  "tray": {
-    "spacing": 10
-  },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format-alt": "{:%Y-%m-%d}"
   },
   "backlight": {
-    "format": ""
+    "format": "<span rise='-2000'>&#xe518;</span> {percent}%"
   },
   "battery": {
     "states": {
@@ -56,44 +30,35 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon}",
-    "format-charging": "",
-    "format-plugged": "",
+    "format": "{icon} {capacity}%",
+    "format-charging": "<span rise='-2000'>&#xe1a3;</span>",
+    "format-plugged": "<span rise='-2000'>&#xe63c;</span>",
     "format-alt": "{time} {icon}",
     "format-icons": [
-      "",
-      "",
-      "",
-      "",
-      ""
+      "<span rise='-2000'>&#xebd9;</span>",
+      "<span rise='-2000'>&#xebe0;</span>",
+      "<span rise='-2000'>&#xebdd;</span>",
+      "<span rise='-2000'>&#xebe2;</span>",
+      "<span rise='-2000'>&#xe1a4;</span>"
     ]
   },
   "network": {
-    "format-wifi": "",
-    "format-ethernet": "",
-    "tooltip-format": "",
-    "format-linked": "",
-    "format-disconnected": "Disconnected ⚠",
+    "format-wifi": "<span rise='-2000'>&#xe63e;</span> {bandwidthDownBytes}",
+    "format-ethernet": "<span rise='-2000'>&#xe63e;</span>",
+    "tooltip-format": "<span rise='-2000'>&#xeb2f;</span>",
+    "format-linked": "<span rise='-2000'>&#xe1e2;</span>",
+    "interval": 3,
+    "format-disconnected": "Disconnected &#xe000;",
     "format-alt": "{ifname}: {ipaddr}/{cidr}"
   },
   "pulseaudio": {
-    "format": "{icon}",
-    "format-bluetooth": "{volume}% {icon} {format_source}",
-    "format-bluetooth-muted": " {icon} {format_source}",
-    "format-muted": " {format_source}",
-    "format-source": "{volume}% ",
-    "format-source-muted": "",
+    "format": "{icon} {volume}%",
+    "format-muted": "<span rise='-2000'>&#xe04e;</span>",
     "format-icons": {
-      "headphone": "",
-      "hands-free": "",
-      "headset": "",
-      "phone": "",
-      "portable": "",
-      "car": "",
+      "headphone": "<span rise='-2000'>&#xf01f;</span>",
+      "headset": "<span rise='-2000'>&#xe311;</span>",
       "default": [
-        "",
-        "",
-        ""
+        "<span rise='-2000'>&#xe050;</span>"
       ]
     },
     "on-click": "pavucontrol"

@@ -25,10 +25,13 @@ set $menu dmenu_path | dmenu | xargs swaymsg exec --
 corner_radius 12
 
 # Window background blur
+animation_duration 1
 blur on
 blur_xray on
-blur_passes 3
-blur_radius 5
+blur_passes 2
+blur_radius 3
+
+# layer_effects "waybar" shadows enable; blur disable;
 
 shadows on
 shadows_on_csd on
@@ -52,7 +55,7 @@ scratchpad_minimize disable
 ### Output configuration
 #
 # Default wallpaper
-output * bg ~/Pictures/background.jpg fill
+output * bg ~/Pictures/bg.png fill
 #
 # Example configuration:
 #
@@ -91,7 +94,7 @@ output * bg ~/Pictures/background.jpg fill
 exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
 exec /usr/libexec/xdg-desktop-portal
-exec eww open bar
+exec waybar
 
 ### Key bindings
 #

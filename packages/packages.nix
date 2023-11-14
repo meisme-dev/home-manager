@@ -12,5 +12,7 @@
   home.packages = with pkgs; [
     pamixer
     font-awesome
+    material-symbols
+    material-design-icons
   ];
 }

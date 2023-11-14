@@ -1,14 +1,12 @@
 * {
   border: none;
-  border-radius: 0;
   min-height: 0;
-  font-family: Material Design Icons, JetBrainsMono Nerd Font;
+  font-family: DejaVu Sans, Material Symbols Rounded;
   font-size: 14px;
 }
 
 window#waybar {
-  background-color: #171a22;
-  padding: 32px;
+  background-color: transparent;
 }
 
 window#waybar.hidden {
@@ -16,53 +14,73 @@ window#waybar.hidden {
 }
 
 #workspaces {
-  background-color: transparent;
+  background-color: #242A2D;
+  border-radius: 12px;
+  margin: 12px 12px;
+  margin-bottom: 0px;
+  padding: 0px 4px;
 }
 
-#workspaces button {
+#workspaces button,
+#window {
   all: initial;
-  min-width: 20px;
-  min-height: 2px;
   font-size: 0px;
-  /* padding: 4px 10px; */
-  margin: 16px 2px;
-  border-radius: 99px;
-  background-color: #bdd3ff;
-  opacity: 0.5;
   color: transparent;
+  min-width: 0;
+  padding: 4px 8px;
+  margin: 8px 6px;
+  border-radius: 100px;
+  background-color: transparent;
   transition-property: all;
   transition-duration: 0.3s;
-  box-shadow: 0px 0px 0px 2px #171a22 inset;
+  box-shadow: 0px 0px 0px 3px #3A515D inset;
 }
 
-#workspaces button.focused,
+#workspaces button.focused {
+  background-color: #51E0FF;
+  box-shadow: 0px 0px 8px 0px rgba(81, 224, 255, 0.25);
+}
+
 #workspaces button:hover {
-  background-color: #bdd3ff;
-  min-width: 64px;
-  opacity: 1;
-  margin: 16px 2px;
-  border-radius: 16px;
-  box-shadow: none;
+  box-shadow: 0px 0px 0px 3px #51E0FF inset;
 }
 
 #workspaces button.urgent {
   background-color: #f38ba8;
 }
 
-#battery,
-#backlight,
 #pulseaudio,
+#battery,
 #network,
-#clock,
-#idle_inhibitor,
-#layout,
-#tray {
-  padding: 4px 10px;
-  margin: 4px;
-  background-color: transparent;
-  color: #ffffff;
+#backlight,
+#clock {
+  margin-top: 12px;
+  padding: 4px 12px;
+  background-color: #242A2D;
   transition-property: all;
   transition-duration: 0.3s;
+  margin-right: 12px;
+  border-radius: 12px;
+}
+
+#pulseaudio {
+  color: #51E0FF;
+}
+
+#battery {
+  color: #34ECFF;
+}
+
+#network {
+  color: #23F2FF;
+}
+
+#backlight {
+  color: #11F9FF;
+}
+
+#clock {
+  color: #00FFFF;
 }
 
 @keyframes blink {
