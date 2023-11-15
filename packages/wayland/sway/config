@@ -36,7 +36,7 @@ blur_radius 3
 shadows on
 shadows_on_csd on
 shadow_blur_radius 20
-shadow_color #0000007F
+shadow_color #00000077
 gaps inner 12
 
 default_border none
@@ -90,10 +90,12 @@ output * bg ~/Pictures/bg.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-
-exec hash dbus-update-activation-environment 2>/dev/null && dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY
+exec hash dbus-update-activation-environment 2>/dev/null 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY
 exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
-exec /usr/libexec/xdg-desktop-portal
+exec systemctl --user stop pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+exec systemctl --user start pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+
 exec waybar
 
 ### Key bindings

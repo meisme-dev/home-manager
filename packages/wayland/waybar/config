@@ -14,10 +14,10 @@
   ],
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-    "format-alt": "{:%Y-%m-%d}"
+    "format-alt": "<span rise='-2000'>&#xe518;</span> {:%Y-%m-%d}"
   },
   "backlight": {
-    "format": "<span rise='-2000'>&#xe518;</span> {percent}%"
+    "format": "<span rise='-2000'>&#xe8b5;</span> {percent}%"
   },
   "battery": {
     "states": {

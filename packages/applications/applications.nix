@@ -10,5 +10,6 @@
     firefox
     looking-glass-client
     freetube
+    gradience
   ];
 }
