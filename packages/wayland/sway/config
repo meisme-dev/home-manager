@@ -29,7 +29,7 @@ animation_duration 1
 blur on
 blur_xray on
 blur_passes 2
-blur_radius 3
+blur_radius 4
 
 # layer_effects "waybar" shadows enable; blur disable;
 
@@ -90,11 +90,12 @@ output * bg ~/Pictures/bg.png fill
 # You can get the names of your inputs by running: swaymsg -t get_inputs
 # Read `man 5 sway-input` for more information about this section.
 
-exec hash dbus-update-activation-environment 2>/dev/null 
-exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY
-exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY
+# exec hash dbus-update-activation-environment 2>/dev/null 
+exec dbus-update-activation-environment --systemd DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+exec systemctl --user import-environment DISPLAY WAYLAND_DISPLAY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
 exec systemctl --user stop pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
 exec systemctl --user start pipewire wireplumber xdg-desktop-portal xdg-desktop-portal-wlr xdg-desktop-portal-gtk
+exec $(nix eval nixpkgs#polkit_gnome.outPath --raw)/libexec/polkit-gnome-authentication-agent-1
 
 exec waybar
 
@@ -180,6 +181,9 @@ exec waybar
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+    # Gestures to switch workspaces
+    bindgesture swipe:right workspace prev
+    bindgesture swipe:left workspace next
 #
 # Layout stuff:
 #

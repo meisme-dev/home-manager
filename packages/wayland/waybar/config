@@ -12,6 +12,18 @@
     "backlight",
     "clock"
   ],
+  "sway/workspaces": {
+    "persistent-workspaces": {
+      "1": [], 
+      "2": [], 
+      "3": [], 
+      "4": [], 
+      "5": [], 
+      "6": [], 
+      "7": [], 
+      "8": []
+    }
+  },
   "clock": {
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     "format": "<span rise='-2000'>&#xe8b5;</span> {:%H:%M}",
@@ -27,8 +39,8 @@
       "critical": 15
     },
     "format": "{icon} {capacity}%",
-    "format-charging": "<span rise='-2000'>&#xe1a3;</span>",
-    "format-plugged": "<span rise='-2000'>&#xe63c;</span>",
+    "format-charging": "<span rise='-2000'>&#xe1a3;</span> {capacity}%",
+    "format-plugged": "<span rise='-2000'>&#xe63c;</span> {capacity}%",
     "format-icons": [
       "<span rise='-2000'>&#xebd9;</span>",
       "<span rise='-2000'>&#xebe0;</span>",
@@ -39,11 +51,11 @@
   },
   "network": {
     "format-wifi": "<span rise='-2000'>&#xe63e;</span> {bandwidthDownBytes}",
-    "format-ethernet": "<span rise='-2000'>&#xe63e;</span>",
-    "tooltip-format": "<span rise='-2000'>&#xeb2f;</span>",
-    "format-linked": "<span rise='-2000'>&#xe1e2;</span>",
+    "format-ethernet": "<span rise='-2000'>&#xeb2f;</span> {bandwidthDownBytes}",
+    "tooltip-format": "{bandwidthUpBytes} {bandwidthDownBytes}",
+    "format-linked": "<span rise='-2000'>&#xe1e2;</span> {bandwidthDownBytes}",
     "interval": 3,
-    "format-disconnected": "Disconnected &#xe000;"
+    "format-disconnected": "<span rise='-2000'>&#xe000;</span> Disconnected"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

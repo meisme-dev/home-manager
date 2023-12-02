@@ -39,6 +39,7 @@
 
     # Needed for zsh-autocomplete to work properly
     initExtra = ''
+      . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
       bindkey "''${key[Up]}" up-line-or-search
     '';
   };

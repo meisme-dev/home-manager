@@ -19,4 +19,6 @@
   home.sessionVariables = {
     EDITOR = "helix";
   };
+  
+  home.sessionPath = [ "$HOME/.local/bin" ];
 }

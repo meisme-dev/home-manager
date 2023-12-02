@@ -12,5 +12,6 @@
     wl-clipboard
     wlogout
     wl-color-picker
+    slurp
   ];
 }
