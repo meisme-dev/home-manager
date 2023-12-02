@@ -6,6 +6,8 @@
   };
 
   outputs = { nixpkgs, home-manager, stylix, ... }: {
+    defaultPackage.x86_64-linux = home-manager.defaultPackage.x86_64-linux;
+  
     homeConfigurations."meisme" = home-manager.lib.homeManagerConfiguration {
       pkgs = import nixpkgs { system = "x86_64-linux"; };
       modules = [ stylix.homeManagerModules.stylix ./home.nix ];

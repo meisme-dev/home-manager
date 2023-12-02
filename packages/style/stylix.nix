@@ -2,5 +2,5 @@
 
 {
     imports = [ (import stylix).homeManagerModules.stylix ];
-    stylix.wallpaper = ~/Pictures/bg.png;
+    stylix.wallpaper = ../../assets/bg.png;
 }
