@@ -7,7 +7,7 @@
 
   outputs = { nixpkgs, home-manager, stylix, ... }: {
     homeConfigurations."meisme" = home-manager.lib.homeManagerConfiguration {
-      pkgs = nixpkgs.legacyPackages;
+      pkgs = nixpkgs.legacyPackages.x86_64-linux;
       modules = [ stylix.homeManagerModules.stylix ./home.nix ];
     };
   };
