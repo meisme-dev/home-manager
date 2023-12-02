@@ -7,7 +7,6 @@
       ./development/development.nix
       ./terminal/terminal.nix
       ./wayland/wayland.nix
-      ./style/stylix.nix
     ];
 
   home.packages = with pkgs; [
