@@ -55,7 +55,7 @@ scratchpad_minimize disable
 ### Output configuration
 #
 # Default wallpaper
-output * bg ../../assets/bg.png fill
+output * bg ~/Pictures/bg.png fill
 #
 # Example configuration:
 #
