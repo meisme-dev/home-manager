@@ -10,6 +10,7 @@
   stylix.opacity.popups = 0.75;
   stylix.fonts.sizes.applications = 10;
   stylix.targets.kitty.variant256Colors = true;
+  stylix.targets.kitty.enable = true;
 
   stylix.override = {
     base00 = "181c1e";
