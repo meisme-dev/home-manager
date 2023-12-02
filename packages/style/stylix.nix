@@ -1,6 +1,7 @@
-{ libs, config, pkgs, ... }:
+{ libs, config, pkgs, stylix, ... }:
 
 {
-    imports = [ (import stylix).homeManagerModules.stylix ];
-    stylix.wallpaper = ../../assets/bg.png;
+    stylix.polarity = "dark";
+    stylix.autoEnable = true;
+    stylix.base16Scheme = ./scheme.yaml;
 }

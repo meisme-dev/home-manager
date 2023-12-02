@@ -15,6 +15,7 @@
     freetube
     gradience
     armcord
+    kitty
     gnome.nautilus
     gnome.gnome-tweaks
   ];
