@@ -5,6 +5,7 @@
   imports =
     [
       ./zsh.nix
+      ./kitty.nix
     ];
 
   home.packages = with pkgs; [
