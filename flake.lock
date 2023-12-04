@@ -1,5 +1,23 @@
 {
   "nodes": {
+    "ags": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1701617970,
+        "narHash": "sha256-sazyPlciTd7MlQ5Nz1JDVq1jruG85+BgdjMsTgnF3es=",
+        "owner": "Aylur",
+        "repo": "ags",
+        "rev": "a6a1b872c3353dd23829845d03b9a8681ab8568e",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Aylur",
+        "repo": "ags",
+        "type": "github"
+      }
+    },
     "base16": {
       "inputs": {
         "fromYaml": "fromYaml"
@@ -164,7 +182,7 @@
     },
     "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1701433070,
@@ -203,6 +221,22 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1693471703,
+        "narHash": "sha256-0l03ZBL8P1P6z8MaSDS/MvuU8E75rVxe5eE1N6gxeTo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "3e52e76b70d5508f3cec70b882a29199f4d1ee85",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1700794826,
         "narHash": "sha256-RyJTnTNKhO0yqRpDISk03I/4A67/dp96YRxc86YOPgU=",
         "owner": "NixOS",
@@ -217,7 +251,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1701253981,
         "narHash": "sha256-ztaDIyZ7HrTAfEEUt9AtTDNoCYxUdSd6NrRHaYOIxtk=",
@@ -233,7 +267,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_4": {
       "locked": {
         "lastModified": 1700856099,
         "narHash": "sha256-RnEA7iJ36Ay9jI0WwP+/y4zjEhmeN6Cjs9VOFBH7eVQ=",
@@ -251,8 +285,9 @@
     },
     "root": {
       "inputs": {
+        "ags": "ags",
         "home-manager": "home-manager",
-        "nixpkgs": "nixpkgs_2",
+        "nixpkgs": "nixpkgs_3",
         "stylix": "stylix"
       }
     },
@@ -268,18 +303,18 @@
         "base16-vim": "base16-vim",
         "flake-compat": "flake-compat",
         "home-manager": "home-manager_2",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_4"
       },
       "locked": {
-        "lastModified": 1701532764,
-        "narHash": "sha256-Jrizp/nITbul2HBIraQRDw5lyJnzTsj0K9wZUFYX2gg=",
-        "owner": "danth",
+        "lastModified": 1701617682,
+        "narHash": "sha256-kChjlFes6UBEtAqyevqVLoHl1+YwZeIQSaIimtFqnyI=",
+        "owner": "meisme-dev",
         "repo": "stylix",
-        "rev": "17a452c5d58bb90057d49c7e3e613b5e6dc1c0f4",
+        "rev": "039d96505ba4db80b0e4756de26d6a84374e2c93",
         "type": "github"
       },
       "original": {
-        "owner": "danth",
+        "owner": "meisme-dev",
         "repo": "stylix",
         "type": "github"
       }
