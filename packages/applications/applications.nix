@@ -7,6 +7,7 @@
       ./resolve.nix
       ./blender.nix
       ./djv.nix
+      ./obs.nix
     ];
     
   home.packages = with pkgs; [

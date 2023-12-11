@@ -3,6 +3,6 @@
   nixpkgs.config.allowUnfree = true;
 
   home.packages = with pkgs; [
-    davinci-resolve
+    #davinci-resolve
   ];
 }
