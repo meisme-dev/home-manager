@@ -11,7 +11,7 @@
     config = rec {
       terminal = "kitty";
       modifier = "Mod4";
-      menu = "nwg-drawer";
+      menu = "ulauncher --no-window-shadow";
       window.border = 0;
       gaps.inner = 12;
       bars = [];
@@ -30,6 +30,7 @@
       shadows_on_csd on
       shadow_blur_radius 20
       layer_effects "gtk-layer-shell" shadows disable;
+      for_window [title="Ulauncher - Application Launcher"] default_floating_border none;
     '';
   };
 

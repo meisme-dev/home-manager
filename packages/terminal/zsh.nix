@@ -41,6 +41,7 @@
     initExtra = ''
       . "$HOME/.nix-profile/etc/profile.d/hm-session-vars.sh"
       bindkey "''${key[Up]}" up-line-or-search
+      [ "$(tty)" = "/dev/tty1" ] && exec sway
     '';
   };
 

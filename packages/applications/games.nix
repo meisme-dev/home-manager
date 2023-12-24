@@ -5,6 +5,6 @@
     prismlauncher
     goverlay
     mangohud
-    steam
+    bottles
   ];
 }

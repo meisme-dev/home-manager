@@ -10,6 +10,7 @@
     ];
     
   home.packages = with pkgs; [
+    nodePackages.typescript-language-server
     git
     gh
     helix

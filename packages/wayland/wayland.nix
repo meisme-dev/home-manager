@@ -14,6 +14,7 @@
     wlogout
     wl-color-picker
     nwg-drawer
+    ulauncher
     slurp
   ];
 }

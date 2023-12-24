@@ -2,6 +2,7 @@
 
 {
   home.packages = with pkgs; [
+    lldb
     clang-tools
     meson
   ];
